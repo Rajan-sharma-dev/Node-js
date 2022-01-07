@@ -36,6 +36,7 @@ describe('assignment_4', () => {
 
         const userAddedResponse = await request(baseUrl)
             .get('/');
+        console.log(userAddedResponse.text)
 
         expect(userAddedResponse.text.includes(`${email}`)).toBe(true);
 
